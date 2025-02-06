@@ -1,0 +1,48 @@
+const area = prompt ("Quieres ir al area de frontend o backend? ");
+let lenguaje = 0;
+
+
+function preguntarArea()
+{
+    if (area == "frontend")
+    {
+        lenguaje = prompt("Te gustaría aprender React o Vue? ");
+    }
+    else if (area == "backend")
+    {
+        lenguaje = prompt("Te gustaría aprender C# o aprender Java? ");
+    }
+    else 
+    {
+        alert("No ingresaste un área válida!");
+    }
+}
+preguntarArea();
+
+function especializarArea()
+{
+    const especialidad = prompt("Escribe 1 si quieres seguir en el area elegida o 0 si quieres fullstack ");
+
+    if (especialidad == 1)
+    {
+        alert ("Bien!, sigue especialiazandote en " + lenguaje + " para dominar " + area);
+    }
+    else if (especialidad == 0)
+    {
+        alert ("Debes aprender más lenguajes para volverte un fullstack(:");
+    }
+    else 
+    {
+        alert("No ingresaste un valor válido!");
+    }
+}
+
+especializarArea();
+
+let mensaje = prompt("Hay otra tecnología que te gustaría aprender? Escribe 'ok' si asi es.");
+while (mensaje === "ok") 
+{
+    let nuevaTecnología = prompt("Mencione cual es");
+    alert( nuevaTecnología + " es muy interesante");
+    mensaje = prompt("Hay otra tecnología que te gustaría aprender? Escribe 'ok' si asi es.");
+}
