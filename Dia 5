@@ -1,0 +1,33 @@
+let frutas = [];
+let lacteos = [];
+let congelados = [];
+let dulces = [];
+
+let respuesta = prompt("Deseas agregar artículos a la lista ? ");
+
+while (respuesta === "si") {
+    let alimento = prompt("Qué deseas agregar?");
+    let categoria = prompt("En qué categoría se encuentra? ");
+
+    if (categoria === "frutas") {
+        frutas.push(alimento);
+    } else if (categoria === "lacteos") {
+        lacteos.push(alimento);
+    } else if (categoria === "congelados") {
+        congelados.push(alimento);
+    } else if (categoria === "dulces") {
+        dulces.push(alimento);
+    } else {
+        alert("Categoría no válida, intenta de nuevo.");
+    }
+
+    respuesta = prompt("¿Deseas agregar otro artículo?");
+}
+
+alert(
+    "Lista de compras:\n" +
+    "Frutas: " + frutas.join(", ") + "\n" +
+    "Lácteos: " + lacteos.join(", ") + "\n" +
+    "Congelados: " + congelados.join(", ") + "\n" +
+    "Dulces: " + dulces.join(", ")
+);
